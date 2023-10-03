@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        body{background-color:white;}
+        body {
+  font-size: 20px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: black;
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="{% url 'home'%}">
+    {% csrf_token %}
+        <h1 align="center"> F.I.R Registration Form</h1>
+     <label for="F.I.R Registration" >1. Date and Hour when reported</label>
+        <input type="text"  name="Date and Hour when reported"><br>
+
+         <label for="F.I.R Registration" >2. Name and residence of informer and complient</label>
+        <input type="text"  name="Name and residence of informer and complient"><br>
+
+        <label for="F.I.R Registration" >3. brief description of offence (with section) and of property  carried off</label>
+        <input type="text"  name="brief description of offence (with section) and of property  carried off"><br>
+
+        <label for="F.I.R Registration" >4. place of occurance and distance and direction  from the police station</label>
+        <input type="text" name="place of occurance and distance and direction  from the police station"><br>
+
+        <label for="F.I.R Registration" >5. Name and address of criminal</label>
+        <input type="text" name="Name and address of criminal"><br>
+
+         <label for="F.I.R Registration" >6. step taken against investigation of delay in regarding information</label>
+        <input type="text" name="step taken against investigation of delay in regarding information"><br>
+
+         <label for="F.I.R Registration" >7. Date and time of despatch from police station</label>
+        <input type="text" name="Date and time of despatch from police station"><br>
+
+         <label for="F.I.R Registration" >signature</label>
+        <input type="file" name="signature"><br><br><br><br><br>
+
+
+
+
+    <button >
+        submit
+    </button>
+    </form>
+
+<p><button type="button"onclick="history.back()"><b>Go Back</b></button></p>
+
+
+</body>
+
+</html>

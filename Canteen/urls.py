@@ -23,23 +23,20 @@ import demo.views
 import django.contrib.auth.views as auth_view
 
 
-urlpatterns = [
+urlpatterns = {
     path('admin/', admin.site.urls),
-    path('landing/',demo.views.landing_view,name='landing'),
-    path('home/',demo.views.home_view,name='home'),
+    path('index/', demo.views.index, name='index'),
+    path('landing/', demo.views.landing, name='landnig'),
 
-    path('login/',auth_view.LoginView.as_view(template_name='login.html'),name='login'),
-    path('register/',demo.views.register,name='register'),
-    path('about/',demo.views.about,name='about'),
-    path('team/',demo.views.team,name='team'),
-    path('instructor/',demo.views.instructor,name='instructor'),
-    path('menu/',demo.views.menu,name='menu'),
-    path('order/',demo.views.order,name='order'),
-    path('payment/',demo.views.payment,name='payment'),
-    path('stream/',demo.views.stream,name='stream'),
-    path('logout/',demo.views.logout,name='logout'),
-    path('others/',demo.views.others,name='others'),
+    path('login/', auth_view.LoginView.as_view(template_name='login.html'), name='login'),
+    path('register/', demo.views.register, name='register'),
 
+    path('aboutus/', demo.views.aboutus, name='aboutus'),
+    path('logout/', demo.views.logout, name='logout'),
+    path('firRegistration/', demo.views.firRegistration, name='firRegistration'),
+    path('showupdate/', demo.views.showupdate, name='showupdate'),
+    path('addinfo/', demo.views.addinfo, name='addinfo'),
+    path('emergencyContact/', demo.views.emergencyContact, name='emergencyContact'),
+    path('crimeRecord/', demo.views.crimeRecord, name='crimerecord'),
 
-
-]
+}
